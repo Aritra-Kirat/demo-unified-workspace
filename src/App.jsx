@@ -4,6 +4,7 @@ import Home from './Home';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
 import ToolConnection from './pages/ToolConnection';
+import Canvas from './pages/Canvas';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login onToggleForm={() => {}} />} />
         <Route path="/registration" element={<Registration onToggleForm={() => {}} />} />
         <Route path="/tool-connection" element={<ToolConnection />} />
+        <Route path="/canvas" element={<Canvas />} />
       </Routes>
     </Router>
   );
