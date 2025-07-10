@@ -292,35 +292,35 @@ const ToolConnection = ({ showButtons = true }) => {
         </div>
       </div>
 
-      {showButtons && shouldShowEnterButton && (
-        <button
-          onClick={handleEnterDashboard}
-          className="fixed bottom-6 left-6 z-50 flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 hover:shadow-xl ml-[350px]"
-          title="Enter Executive Dashboard"
-        >
-          <FaDoorOpen className="mr-2" />
-          Enter Dashboard
-        </button>
-      )}
-
       {showButtons && (
-        <button
-          onClick={handleTakeTour}
-          className="fixed bottom-6 right-6 z-50 flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 hover:shadow-xl mr-[350px]"
-          title="Take a Tour"
-        >
-          <FaPlane className="mr-2" />
-          Take a Tour
-        </button>
+        <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 mt-8 w-full">
+          {shouldShowEnterButton && (
+            <button
+              onClick={handleEnterDashboard}
+              className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 hover:shadow-xl w-full md:w-auto"
+              title="Enter Executive Dashboard"
+            >
+              <FaDoorOpen className="mr-2" />
+              Enter Dashboard
+            </button>
+          )}
+          <button
+            onClick={handleTakeTour}
+            className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 hover:shadow-xl w-full md:w-auto"
+            title="Take a Tour"
+          >
+            <FaPlane className="mr-2" />
+            Take a Tour
+          </button>
+          <button
+            onClick={goToHome}
+            className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-300 hover:shadow-xl w-full md:w-auto"
+            title="Back to Home"
+          >
+            Back to Home
+          </button>
+        </div>
       )}
-
-      <button
-        onClick={goToHome}
-        className="fixed bottom-6 z-50 flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-300 hover:shadow-xl"
-        title="Back to Home"
-      >
-        Back to Home
-      </button>
 
       {showSlackModal && (
         <>
