@@ -63,15 +63,19 @@ const Canvas = () => {
       </div>
 
       {enlargedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="relative max-w-full max-h-full">
+        <div className="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="relative max-w-full max-h-full w-full h-full flex items-center justify-center">
             <button
               onClick={closeImage}
-              className="absolute -top-10 right-0 text-white text-4xl hover:text-gray-300"
+              className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300"
             >
               &times;
             </button>
-            <img src={enlargedImage} alt="Enlarged view" className="max-w-full h-[75vh]" />
+            <img
+              src={enlargedImage}
+              alt="Enlarged view"
+              className="max-w-full  2xl:h-[75vh] xl:h-[75vh] lg:h-[75vh] md:h-[75vh] w-auto h-auto object-contain"
+            />
           </div>
         </div>
       )}
